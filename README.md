@@ -7,19 +7,18 @@ Proyecto Web para Misión TIC 2022
 Ideas para el desarrollo de la aplicación de la Librería.
 
 Nelson J Tellez:
+
 Sergio Buitrago:
+
 Sergio Triviño:
- Felipe Arturo Bedoya Castro:
+
+Felipe Arturo Bedoya Castro:
+ 
 Juan David Castro Marin:
 *Sistema de login con encriptación de claves.
 -El usuario del login debería ser un correo electrónico. Validaciones con expresiones regulares
 -Las claves deben estar encriptadas en nuestra bd.
 -La clave debería tener condiciones tales como permitir caracteres especiales, mayúsculas, minúsculas, números. 
-
-*
-*(opcional) para usuarios registrados puedan iniciar con su correo electrónico login con autenticación OATH2 (correo electronico)
-
-
 
 NOTA: 
 Qué tal si creamos una aplicación de administración de una “natillera” (el que no se pa que es una natillera es un sistema de ahorro).
