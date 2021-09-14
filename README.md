@@ -2,23 +2,16 @@
 Proyecto Web para Misión TIC 2022
 
 
+GESTION DE CONFIGURACIÓN:
+Plataformas que vamos a usar en el desarrollo del proyecto:
 
-
-Ideas para el desarrollo de la aplicación de la Librería.
-
-Nelson J Tellez:
-
-Sergio Buitrago:
-
-Sergio Triviño:
-
-Felipe Arturo Bedoya Castro:
- 
-Juan David Castro Marin:
-*Sistema de login con encriptación de claves.
--El usuario del login debería ser un correo electrónico. Validaciones con expresiones regulares
--Las claves deben estar encriptadas en nuestra bd.
--La clave debería tener condiciones tales como permitir caracteres especiales, mayúsculas, minúsculas, números. 
-
-
-
+Gestión de documentos:		Google Drive ()
+Plataforma de Comunicación:	WhatsApp
+stack:
+Frontend:
+Backend:
+Motor de base de datos:
+Repositorio: Github
+Tablero de proyecto: Trello
+Ambiente de desarrollo: VSC Visual Studio Code
+Casos de usuo: Trello
