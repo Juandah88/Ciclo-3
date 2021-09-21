@@ -1,80 +1,103 @@
 
-body {
-    color: #404E67;
-    background: #F5F7FA;
-font-family: 'Open Sans', sans-serif;
-}
-.table-wrapper {
-width: 700px;
-margin: 30px auto;
-    background: #fff;
-    padding: 20px;	
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-}
-table.table {
-    table-layout: fixed;
-}
-table.table tr th, table.table tr td {
-    border-color: #e9e9e9;
-}
-table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-table.table th:last-child {
-    width: 100px;
-}
-table.table td a {
-cursor: pointer;
-    display: inline-block;
-    margin: 0 5px;
-min-width: 24px;
-}    
-table.table td a.add {
-    color: #27C46B;
-}
-table.table td a.edit {
-    color: #FFC107;
-}
-table.table td a.delete {
-    color: #E34724;
-}
-table.table td i {
-    font-size: 19px;
-}
-table.table td a.add i {
-    font-size: 24px;
-  margin-right: -1px;
-    position: relative;
-    top: 3px;
-}    
-table.table .form-control {
-    height: 32px;
-    line-height: 32px;
-    box-shadow: none;
-    border-radius: 2px;
-}
-table.table .form-control.error {
-border-color: #f50000;
-}
-table.table td .add {
-display: none;
-}
-/*LOGIN PAGE*/
-.gradient-custom {
-  /* fallback for old browsers */
-  background: #6a11cb;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgb(77, 45, 112), rgba(37, 117, 252, 1));
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgb(37, 252, 198))
-}
-
-.bg-primary {
-  background-image: url("/root/img/biblioteca.jpg") ;
- }
-
- /*MENÚ*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .menu-nav {
+    height: 90px;
+    background-color: rgb(57, 59, 68);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 0px 50px 0px 10px;
+  }
+  .menu-nav .logo {
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(213, 205, 221);
+    padding: 5px 50px;
+  }
+  .menu-nav .barra-menu {
+    display: flex;
+    list-style: none;
+  }
+  .menu-nav .barra-menu li {
+    margin: 0 20px;
+  }
+  /* menu completo */
+  
+  .menu-nav .barra-menu li a {
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    background: rgb(65, 65, 65);
+    padding: 10px 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    }
+    
+  .menu-nav .barra-menu li a:hover,
+  .menu-nav .barra-menu .pag-activa {
+    color: aliceblue;
+    background-color: rgba(37, 117, 252,0.5)
+  }
+  
+  .menu-nav .menu-btn i{
+  color: rgb(209, 209, 209);
+  font-size: 40px;
+  cursor: pointer;
+  display: none;
+  }
+  
+  /* evento menu amburguesa  check  */
+  #click:checked  ~ .barra-menu {
+     display: none; }
+     #click{
+       display: none;
+     }
+  
+  /* responsive */
+  @media (max-width: 925px) {
+    .menu-nav .menu-btn i {
+      display: block;
+    }
+  
+   
+    .menu-nav .barra-menu {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      background: rgb(34, 34, 34);
+      height: 100vh;
+      width: 100%;
+      display: block;
+      text-align: center;
+      transition: all 0.3s ease ;
+    }
+  
+    .menu-nav .barra-menu li{
+      margin: 40px 0;
+    }
+    
+    .menu-nav .barra-menu li a {
+      font-size: 20px;
+      /* margin: 20px; */
+      display: block;
+      
+    }
+  
+   
+    /* cambio a menu hamburguesa */
+    .menu-nav .barra-menu li a:hover,
+    .menu-nav .barra-menu .pag-activa {
+    color: aliceblue;
+    background-color: rgba(37, 117, 252,0.5);
+    }
+    .bg-primary {
+      background-image: url("/src/root/img/biblioteca.jpg");
+    }
+  }
