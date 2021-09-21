@@ -23,10 +23,18 @@ a {
     color: rgb(34, 34, 34);
 }
 
-table {
+.tabla-comentarios{
     text-align: center;
-    border: 3px;
-    border-color: rgb(65, 65, 65);
+}
+
+table, td {
+    border: 1px solid rgb(65, 65, 65);
+    border-collapse: collapse;
+}
+
+table {
+    margin-top: 5px;
+    width: 100%;
 }
 
 
