@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+
+
+    html {
+        font-family: 'Source Sans Pro', Georgia, Times, 'Times New Roman', sans-serif;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: rgb(57, 59, 68); /* valido para titulos y parrafos */
+        text-align: center;
+    }
+    
+    img {
+        display: block;
+        width: 20%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgb(34, 34, 34);
+    }
+    
+    .tabla-comentarios{
+        text-align: center;
+    }
+    
+    table, td {
+        border: 1px solid rgb(65, 65, 65);
+        border-collapse: collapse;
+    }
+    
+    table {
+        margin-top: 5px;
+        width: 100%;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/root/css/site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="contenido-principal" ></main>
+        <section class="imagen-reseña">
+            <h1>Nombre Libro</h1>
+            <div>
+                <img src="./resources/images/pexels-monstera-6373409.jpg" alt="Imagen portada del libro" width="319" height="337">
+                <h2>Reseña</h2>
+                <span class="parrafo-reseña">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                        nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </span>
+            </div>
+        </section>
+        <section class="tabla-comentarios" >
+            <button><a href="#">Publicar Comentario</a></button>
+            <div style="overflow-x: auto;" >
+                <table>
+                    <tr>
+                        <td class="usuario">Usuario</td>
+                        <td class="comentario">Comentario</td>
+                    </tr>
+                    <tr>
+                        <td class="usuario">Usuario</td>
+                        <td class="comentario">Comentario</td>
+                    </tr>
+                    <tr>
+                        <td class="usuario">Usuario</td>
+                        <td class="comentario">Comentario</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
