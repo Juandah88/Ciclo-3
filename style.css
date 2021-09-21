@@ -1,0 +1,32 @@
+html {
+    font-family: 'Source Sans Pro', Georgia, Times, 'Times New Roman', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(57, 59, 68); /* valido para titulos y parrafos */
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 20%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+}
+
+table {
+    text-align: center;
+    border: 3px;
+    border-color: rgb(65, 65, 65);
+}
+
+
