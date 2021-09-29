@@ -10,6 +10,7 @@ router.get('/libros', async(request, response) =>
     try {
         let books = await book.find();
         response.send(books);
+        response.render('books/index')
     } catch (error) {
         response.send('Error: ' + error);
     }
@@ -53,6 +54,8 @@ router.post('/libros/crear', async function(request, response){
         response.send(error);
     }
 });
+
+//TODO: falta revisar el patch, en el momento no esta entrando al método después de realizar la solictud
 
 router.patch('libros/:id', async(request, response)=>
 {
