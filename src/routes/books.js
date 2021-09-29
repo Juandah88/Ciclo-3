@@ -1,8 +1,9 @@
 const express = require('express');
-const router = express.Router();
 const book = require('../model/book');
+const router = express.Router();
 
-router.get('/Libros', async(request, response) => 
+
+router.get('/libros', async(request, response) => 
 {
     try {
         let books = await book.find();
@@ -13,8 +14,17 @@ router.get('/Libros', async(request, response) =>
         
 });
 
-router.get('/Libros/Crear', (request, response) => {
-    response.render('books/create');
-})
+router.post('/libros/crear', function(request, response){
+    const data =  new book({
+        titulo: request.body.titulo,
+        autor: request.body.autor,
+        descripcion: request.body.descripcion,
+        presentacion: request.body.presentacion
+    });
+
+    try
+
+    
+});
 
 module.exports= router;
