@@ -12,14 +12,20 @@ const bookSchema = new mongoose.Schema(
             required: true,
             index: true
         },
+        genero:{
+            type:String,
+            required: true,
+
+        },       
         descripcion:{
             type: String,
             required: true,
+
         },
-        presentacion:{
-            type: String,
-            required: true,
-        }
+        // presentacion:{
+        //     type: String,
+        //     required: true,
+        // }
 
     }
 );

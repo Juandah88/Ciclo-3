@@ -8,25 +8,25 @@ const router = express.Router();
 router.get('/libros', async(request, response) => 
 {
     try {
-        let books = await book.find();
-        response.send(books);
-        response.render('books/index')
+        let books = await book.find().lean();
+        //response.send(books);
+        response.render('books/index', {books})
     } catch (error) {
         response.send('Error: ' + error);
     }
         
 });
 
-router.get('/libros/:id', async(request, response) => 
-{
-    try {
-        response.json(await book.findById(request.params.id));
+// router.get('/libros/:id', async(request, response) => 
+// {
+//     try {
+//         response.json(await book.findById(request.params.id));
         
-    } catch (error) {
-        response.send('Error: ' + error);
-    }
+//     } catch (error) {
+//         response.send('Error: ' + error);
+//     }
         
-});
+// });
 
 router.get('/libros/crear', (request, response)=>
 {
