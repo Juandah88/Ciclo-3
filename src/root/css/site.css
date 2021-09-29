@@ -100,7 +100,8 @@
   } 
   /*Background del login*/
   .bg-primary {
-    background-image: url("/img/biblioteca.jpg");
+    background-image: url("/src/root/img/biblioteca.jpg");
+
   }
   
 	.table-responsive {

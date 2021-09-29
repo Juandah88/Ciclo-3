@@ -6,7 +6,6 @@ const expressSession = require('express-session');
 
 //Inicializaciones
 const app = express();
-require('./database');
  
 //Settings
     //Se configura el puerto
@@ -33,8 +32,6 @@ require('./database');
 //Global Variables
 
 //Static files  
-//Se establece la configuración donde van a estar los archivos estaticos
-app.use(express.static(path.join(__dirname, 'resources')));
 
 //Middleware
     //
