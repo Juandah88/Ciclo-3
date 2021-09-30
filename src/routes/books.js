@@ -40,17 +40,14 @@ router.post('/libros/crear', async function(request, response){
         titulo: request.body.titulo,
         autor: request.body.autor,
         descripcion: request.body.descripcion,
-        presentacion: request.body.presentacion
+        genero: request.body.genero
     });
 
     try{
         //Se guarda el objeto en la base de datos.
         let data  = await  newBook.save();
-        response.json(data);
-        response.status = 200;
-
+        response.redirect('/libros');
     }catch(error){
-
         response.send(error);
     }
 });
