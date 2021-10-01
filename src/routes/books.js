@@ -9,8 +9,32 @@ router.get('/libros', async(request, response) =>
 {
     try {
         let books = await book.find().lean();
-        //response.send(books);
         response.render('books/index', {books})
+    } catch (error) {
+        response.send('Error: ' + error);
+    }
+        
+});
+
+router.get('/libros/:id/editar', async(request, response) => 
+{
+    try {
+        let data = await book.findById(request.params.id).lean();
+        //response.send(books);
+        response.render('books/edit', {data})
+    } catch (error) {
+        response.send('Error: ' + error);
+    }
+        
+});
+
+router.delete('/libros/:id/borrar', async(request, response) => 
+{
+    try {
+        //Se elimina el registro de la base de datos.
+        await book.findByIdAndDelete(request.params.id);
+        //Se redireciona al la principal de lirbos       
+        response.redirect('/libros')
     } catch (error) {
         response.send('Error: ' + error);
     }

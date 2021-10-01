@@ -43,10 +43,15 @@
                             <td>{{editorial}}</td>
                             <td>{{genero}}</td>
                             <td>
-                                <a href="libros/:id/comentario" class="edit" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="libros/{{_id}}/borrar" class="delete" data-toggle="modal"><i class="material-icons"
-                                        data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                <a href="libros/{{_id}}/editar" class="edit"><i class="material-icons"
+                                         title="Edit">&#xE254;</i></a>
+                                <form action="libros/{{_id}}/borrar?_method=DELETE" method="POST">
+                                <input type="hidden" value="DELETE" name="_method">
+                                
+                                       <button class="material-icons"
+                                        title="Delete">&#xE872;</button>
+                                </form>
+                                
                             </td>
                         </tr>
 

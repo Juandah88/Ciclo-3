@@ -152,7 +152,7 @@ vertical-align: middle;
 }
 
 
-table.table th i {
+table.table th button {
     font-size: 13px;
     margin: 0 5px;
     cursor: pointer;
@@ -175,8 +175,6 @@ table.table td a.edit {
 table.table td a.delete {
     color: #F44336;
 }
-table.table td i {
-    font-size: 19px;
-}
+
 
 
