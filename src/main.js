@@ -9,9 +9,7 @@ const app = express();
 require('./database');
 
 //Middleware
-    //
     app.use(express.urlencoded({extended: true}));
-
     app.use(express.json());
     // Se configura  para enviar delete, put, a travez de los forms
     app.use(methodOverride('_method')) ;

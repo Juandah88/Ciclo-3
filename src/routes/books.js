@@ -7,25 +7,28 @@ const router = express.Router();
 
 router.get('/libros', async(request, response) => 
 {
+    let errors = [];
     try {
         let books = await book.find().lean();
         response.render('books/index', {books})
     } catch (error) {
-        response.send('Error: ' + error);
+        errors.push({text: error})
+        response.render('error', {errors})
     }
         
 });
 
 router.get('/libros/:id/editar', async(request, response) => 
 {
+    let errors = [];
     try {
-        let data = await book.findById(request.params.id).lean();
-        //response.send(books);
+        let data = await book.findById(request.params.id)
+        .lean();
         response.render('books/edit', {data})
     } catch (error) {
-        response.send('Error: ' + error);
+        errors.push({text: error})
+        response.render('books/edit', {errors})
     }
-        
 });
 
 router.delete('/libros/:id/borrar', async(request, response) => 
@@ -36,7 +39,7 @@ router.delete('/libros/:id/borrar', async(request, response) =>
         //Se redireciona al la principal de lirbos       
         response.redirect('/libros')
     } catch (error) {
-        response.send('Error: ' + error);
+        response.render('error', {error})
     }
         
 });
@@ -72,7 +75,7 @@ router.post('/libros/crear', async function(request, response){
         let data  = await  newBook.save();
         response.redirect('/libros');
     }catch(error){
-        response.send(error);
+        response.render('error', {error})
     }
 });
 
@@ -102,6 +105,7 @@ router.patch('libros/:id', async(request, response)=>
         response.status = 204;
         
     } catch (error) {
+        response.render('error', {error})
         
     }
 });
