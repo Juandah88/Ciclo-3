@@ -10,13 +10,13 @@ Gestión de documentos: Google Drive (https://drive.google.com/drive/folders/1nX
 
 Plataforma de Comunicación:	WhatsApp
 
-stack:
+stack: 
 
-Frontend:
+Frontend: handlebars
 
-Backend:
+Backend: node js
 
-Motor de base de datos:
+Motor de base de datos: MONGO DB
 
 Repositorio: Github
 
