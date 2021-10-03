@@ -1,88 +1,48 @@
-<head>
-    <style>
-    html {
-        font-family: 'Source Sans Pro', Georgia, Times, 'Times New Roman', sans-serif;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: rgb(57, 59, 68); /* valido para titulos y parrafos */
-        text-align: center;
-    }
-    
-    img {
-        display: block;
-        width: 20%;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    a {
-        text-decoration: none;
-        color: rgb(34, 34, 34);
-    }
-    
-    .tabla-comentarios{
-        text-align: center;
-    }
-    
-    table, td {
-        border: 1px solid rgb(65, 65, 65);
-        border-collapse: collapse;
-    }
-    
-    table {
-        margin-top: 5px;
-        width: 100%;
-    }
-    </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro: {{data.titulo}}</title>
-    <link rel="stylesheet" href="/src/root/css/site.css">
-
-</head>
-
-
-
 <body>
-    <main class="contenido-principal" ></main>
-        <section class="imagen-reseña">
-            <h1>{{titulo}}</h1>
-            <div>
-                <img alt="Imagen portada del libro" width="319" height="337">
-                <h2>Reseña</h2>
-                <span class="parrafo-reseña">
-                    <p>
-                     {{data.descripcion}}
-                    </p>
-                </span>
-            </div>
-        </section>
-        <section class="tabla-comentarios" >
-            <button><a href="#">Publicar Comentario</a></button>
-            <div style="overflow-x: auto;" >
-                <table>
-                    <tr>
-                        <td class="usuario">Usuario</td>
-                        <td class="comentario">Comentario</td>
-                    </tr>
-                    <tr>
-                        <td class="usuario">Usuario</td>
-                        <td class="comentario">Comentario</td>
-                    </tr>
-                    <tr>
-                        <td class="usuario">Usuario</td>
-                        <td class="comentario">Comentario</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-    </main>
+
+    <div class=" justify-content-center bg-primary" style="padding: 2% 15% 2%;">
+	<div style="background-color: white; border-radius: 15px;">
+		<div style="padding: 20px 20px 20px 20px;">
+             <br>
+             <img class="img-book" alt="Imagen portada del libro" width="319" height="337">
+             <br>
+             <button class="img-book">CargarImagen</button>
+             <br>
+			<form action="/libros/{{data._id}}/editar" method="POST">
+				<div>
+					<h4>Editar libro</h4>
+				</div>
+					<div class="form-group">
+						<label>Titulo</label>
+						<input name="titulo" type="text" class="form-control" value="{{data.titulo}}">
+					</div>
+					<div class="form-group">
+						<label>Autor</label>
+						<input name="autor" type="text" class="form-control" value="{{data.autor}}">
+					</div>
+					<div class="form-group">
+						<label>Descricpción</label>
+						<textarea name="descripcion" type="text" style="resize:none;" class="form-control">
+							{{data.descripcion}}
+						</textarea>
+					</div>
+					<div class="form-group">
+						<label>Genero</label>
+						<input name="genero" type="text" class="form-control" value="{{data.genero}}">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col">
+						<a href="/libros">
+							<input type="button" class="btn btn-secondary" value="Cancelar" />
+						</a>
+					</div>
+					<div class="col col-lg-2"><input type="submit" class="btn btn-success" value="Crear"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
 </body>
-</html>

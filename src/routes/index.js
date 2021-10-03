@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 router.get('/', (request, response)=>{
-     response.send('Index')
+     response.render('books/index')
     });
 
 module.exports = router;
