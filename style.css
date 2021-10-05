@@ -49,6 +49,8 @@ table {
     width: 100%;
 }
 
+table tr:nth-child(even){background-color: #f2f2f2;}
+
 footer {
     background-color: gray;
     text-align: center;
