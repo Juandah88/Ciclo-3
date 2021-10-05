@@ -49,4 +49,14 @@ table {
     width: 100%;
 }
 
+footer {
+    background-color: gray;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
+footer p {
+    color: aliceblue;
+    font-size: small;
+}
