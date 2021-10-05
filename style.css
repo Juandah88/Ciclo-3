@@ -4,6 +4,17 @@ html {
     margin-right: 50px;
 }
 
+header {
+    background-color: gray;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header a {
+    color: aliceblue;
+    margin-left: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: rgb(57, 59, 68); /* valido para titulos y parrafos */
     text-align: center;
