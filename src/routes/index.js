@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 router.get('/', (request, response)=>{
-     response.render('books/index')
+     response.redirect('/libros')
     });
 
 module.exports = router;
