@@ -3,10 +3,13 @@ const path = require('path');
 const expressHbs = require('express-handlebars');
 const methodOverride =   require('method-override')
 const expressSession = require('express-session');
+const passport = require('passport');
 
 //Inicializaciones
 const app = express();
 require('./database');
+require('./passport');
+
 
 //Middleware
     app.use(express.urlencoded({extended: true}));
@@ -19,6 +22,9 @@ require('./database');
              resave: true,
              saveUninitialized: true 
     }));
+    app.use(passport.initialize());
+    app.use(passport.session());
+    
 
  
 //Settings
