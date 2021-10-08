@@ -40,8 +40,8 @@ require('./database');
 
 //Routes
     //Se configura las rutas para la navegación
-    app.use(require('./routes/index.js'))
-    app.use(require('./routes/books.js'))
+    app.use(require('../src/routes/index.js'))
+    app.use(require('../src/routes/books.js'))
 
 
 //Static files  
