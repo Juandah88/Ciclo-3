@@ -3,6 +3,90 @@
     
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
+
+.banner {
+    width: 100%;
+}
+
+.banner>img {
+    width: 100%;
+    height: 400px;
+    max-width: 2000px;
+    object-fit: cover;
+}
+
+.godown {
+    height: 60px;
+}
+
+
+.texto{
+    text-align: justify;
+}
+
+.titulo-seccion{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.seccion-noticias{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #f7f7f7; */
+}
+
+.noticia{
+    width: 50%;
+    padding: 20px;
+    text-align: justify;
+}
+
+.titulo-noticia {
+    text-align: center;
+
+}
+
+.cabecera-noticia{
+    display: flex;
+    justify-content: space-around;
+}
+
+.seccion-servicios{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f7f7f7;
+}
+
+.servicio {
+    text-align: center;
+    padding: 20px;
+    width: 33%;
+}
+
+.imagen-servicio {
+    align-items: center;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.seccion-equipo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.integrante {
+    text-align: center;
+    padding: 20px;
+    width: 20%;
+}
+
+.pie-de-pagina {
+    height: 200px;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
   /*Background del login*/
   .bg-primary {
     background-image: url("/img/biblioteca.jpg");

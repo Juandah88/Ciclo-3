@@ -12,8 +12,8 @@
 
     <div class="container">
         <div class="table-responsive">
-            <div class="table-wrapper">
-                <div class="table-title">
+            <div class="table-wrapper bg-dark">
+                <div class="table-title bg-secondary">
                     <div class="row">
                         <div class="col-xs-6">
                             <h2><b>Listado de libros</b></h2>
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                <table id="books" class="table table-success table-striped table-hover">
+                <table id="books" class="table table-light table-success table-striped table-hover">
                     <thead>
                         <tr>                         
                             <th>Titulo</th>
@@ -41,7 +41,7 @@
                             <td>{{autor}}</td>
                             <td>{{genero}}</td>
                             <td>
-                                <a href="libros/{{_id}}/editar" class="edit"><i class="material-icons"
+                                <a href="libros/{{_id}}/editar" class="edit"><i class="material-icons pb-3"
                                          title="Edit">&#xE254;</i></a>
                                 <form action="libros/{{_id}}/borrar?_method=DELETE" method="POST">
                                 <input type="hidden" value="DELETE" name="_method">

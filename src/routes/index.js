@@ -6,4 +6,8 @@ router.get('/', (request, response)=>{
      response.render('books/index')
     });
 
+router.get('/inicio', (request, response)=>{
+    response.render('home')
+    });
+
 module.exports = router;

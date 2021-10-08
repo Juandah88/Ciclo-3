@@ -6,7 +6,7 @@ const user = require('../model/user');
 
 
 router.get('/usuarios/iniciosesion', (request, response) => {
-    response.render('login', { layout: false });
+    response.render('users/login', { layout: false });
 })
 
 router.post('/usuarios/iniciosesion', passport.authenticate('local', 

@@ -1,151 +1,21 @@
-<!doctype html>
+{{!-- <!doctype html> --}}
 <html lang="en">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    <style>
-        .banner {
-            width: 100%;
-        }
 
-        .banner>img {
-            width: 100%;
-            height: 400px;
-            max-width: 2000px;
-            object-fit: cover;
-        }
-
-        .godown {
-            height: 60px;
-        }
-
-        
-        .texto{
-            text-align: justify;
-        }
-
-        .titulo-seccion{
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .seccion-noticias{
-            display: flex;
-            flex-wrap: wrap;
-            /* background-color: #f7f7f7; */
-        }
-
-        .noticia{
-            width: 50%;
-            padding: 20px;
-            text-align: justify;
-        }
-
-        .titulo-noticia {
-            text-align: center;
-
-        }
-
-        .cabecera-noticia{
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .seccion-servicios{
-            display: flex;
-            flex-wrap: wrap;
-            background-color: #f7f7f7;
-        }
-
-        .servicio {
-            text-align: center;
-            padding: 20px;
-            width: 33%;
-        }
-
-        .imagen-servicio {
-            align-items: center;
-            border-radius: 50%;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        .seccion-equipo{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .integrante {
-            text-align: center;
-            padding: 20px;
-            width: 20%;
-        }
-
-        .pie-de-pagina {
-            height: 200px;
-            display: flex;
-            color: white;
-            justify-content: space-evenly;
-        }
-    </style>
-  <head data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-    <!-- Inicio Menú de Navegación-->  
-        <nav id="main-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" >
-            <div class="container-fluid mb-2">
-                <a class="navbar-brand" href="#">
-                    <img src="../root/img/logo.png" alt="" width="" height="65" class="d-inline-block align-text-top">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse ps-5 fs-5" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item px-1">
-                            <a class="nav-link active" aria-current="page" href="#Inicio">Inicio</a>
-                        </li>
-                        <li class="nav-item px-1">
-                            <a class="nav-link" href="../View/login.html">Ingresar</a>
-                        </li>
-                        <li class="nav-item dropdown px-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Conócenos 
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#Noticias">Noticias</a></li>
-                                <li><a class="dropdown-item" href="#Servicios">Servicios</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#Equipo">Nuestro Equipo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    <!-- Fin Menú de Navegación-->
-    <!-- Inicio Espaciado para Barra de Navegación-->
-        <div class="godown" id="Inicio"></div>
-        <script>            
-                $("#main-navbar").resize(function () {
-                    $('#Inicio').height($("#main-navbar").height() + 10);
-                });
-            
-                if ($("#main-navbar").height() > $('#Inicio').height()) $('#Inicio').height($("#main-navbar").height() + 10);
-            
-        </script>
-    <!-- Fin Espaciado para Barra de Navegación-->
+  <head>
+    
     <!-- Inicio Imagen Banner--> 
         <div id="banner" class="banner">
-            <img src="../root/img/alejandria.jpg" alt="../root/img/logo.png">
+            <img src="/img/alejandria.jpg" alt="/img/logo.png">
         </div>
     <!-- Fin Imagen Banner--> 
+
   </head>
-  <body data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <body>
      <!-- Inicio Contenido Principal -->
-    <main>
+    <main style="background-color: whitesmoke;"> 
         <!-- Inicio Noticias -->
         <h2 class="mx-auto titulo-seccion" style="width: 100px;" id="Noticias" >Noticias</h2>
 
@@ -288,21 +158,5 @@
     </main>
     <!-- Fin Contenido Principal -->
 
-    <!-- Inicio Pie de Página -->
-    <footer class="pie-de-pagina bg-dark py-4">
-            <article>
-                <h3>Contacto</h3>
-                <p>Aquí van varias lineas</p>
-                <p>Donde va la información de contacto</p>
-                <p>Como el teléfono y demás</p>
-            </article>
-            <article>
-                <h2>Otra Información</h2>
-                <p>Aquí van varias lineas</p>
-                <p>Donde va la otra información</p>
-                <p>Como el mapa del sitio o enlaces importantes</p>
-            </article>
-    </footer>
-    <!-- Fin Pie de Página -->
   </body>
 </html>
