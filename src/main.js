@@ -12,6 +12,15 @@ require('./database');
     app.use(express.json());
     // Se configura  para enviar delete, put, a travez de los forms
     app.use(methodOverride('_method')) ; 
+
+    app.use((req, res, next)=>{
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, ContentType, Accept");
+        res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+        res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+        next();
+       });
+       
 //Settings
     //Se configura el puerto
     app.set('port', 8080);
@@ -40,4 +49,9 @@ require('./database');
 app.use(express.static(path.join(__dirname, 'resources')));
 
 //Server listenning
-app.listen(app.get('port'), ()=> {console.log(app.get('port'));});
+//app.listen(app.get('port'), ()=> {console.log(app.get('port'));});
+
+app.set("PORT", process.env.PORT || 3000);
+app.listen(app.get("PORT"), () => {
+ console.log(`Server started on port: ${app.get("PORT")}`);
+});
