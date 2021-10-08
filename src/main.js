@@ -2,31 +2,16 @@ const express = require('express');
 const path = require('path');
 const expressHbs = require('express-handlebars');
 const methodOverride =   require('method-override')
-const expressSession = require('express-session');
-const passport = require('passport');
 
 //Inicializaciones
 const app = express();
 require('./database');
-require('./passport');
-
 
 //Middleware
     app.use(express.urlencoded({extended: true}));
     app.use(express.json());
     // Se configura  para enviar delete, put, a travez de los forms
-    app.use(methodOverride('_method')) ;
-    //Se configura la sesión
-    app.use(expressSession({
-             secret:'MySecret',
-             resave: true,
-             saveUninitialized: true 
-    }));
-    app.use(passport.initialize());
-    app.use(passport.session());
-    
-
- 
+    app.use(methodOverride('_method')) ; 
 //Settings
     //Se configura el puerto
     app.set('port', 8080);
@@ -48,8 +33,7 @@ require('./passport');
     //Se configura las rutas para la navegación
     app.use(require('./routes/index.js'))
     app.use(require('./routes/books.js'))
-    app.use(require('./routes/users.js'))
-//Global Variables
+
 
 //Static files  
 //Se establece la configuración donde van a estar los archivos estaticos
