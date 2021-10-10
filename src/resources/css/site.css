@@ -68,6 +68,8 @@
     border-radius: 50%;
     margin-right: auto;
     margin-left: auto;
+    max-width: 256px;
+    max-height: 256px;
 }
 .seccion-equipo{
     display: flex;
@@ -85,6 +87,10 @@
     display: flex;
     color: white;
     justify-content: space-evenly;
+}
+
+.bg-home{
+    background-color: white;
 }
 
   /*Background del login*/
