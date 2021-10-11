@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/Juandah88/Ciclo-3#readme",
   "dependencies": {
+    "auth": "0.0.9",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
     "method-override": "^3.0.0",
-    "mongoose": "^6.0.7"
+    "mongoose": "^6.0.7",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0"
   }
 }
