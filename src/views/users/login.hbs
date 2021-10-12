@@ -2,8 +2,6 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>  
@@ -19,17 +17,19 @@
                 <p class="text-white-50 mb-5">Ingrese sus credenciales</p>
                 <form action="/usuarios/iniciosesion" method="POST">
                   <div class="form-outline form-white mb-3">
-                    <input type="email" id="email" class="form-control form-control-lg"
+                    <input type="email" name="email" class="form-control form-control-lg"
                       placeholder="Email o nombre de usuario" />
                   </div>
                   <div class="form-outline form-white mb-4">
-                    <input type="password" id="password" class="form-control form-control-lg"
+                    <input type="password" name="password" class="form-control form-control-lg"
                       placeholder="Contraseña" />
                   </div>
                   <button class="btn btn-outline-light btn-lg px-3" type="submit">Login</button>
+                  <br class="py=2"></br>
+                  <a type="button" class="btn btn-outline-light btn-sm px-3" href="/usuarios/registro" role="button">Registrar</a>
                 </div>
                 <div>
-                </form>                
+                </form>
               </div>
             </div>
           </div>

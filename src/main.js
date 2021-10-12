@@ -2,10 +2,13 @@ const express = require('express');
 const path = require('path');
 const expressHbs = require('express-handlebars');
 const methodOverride =   require('method-override')
+const expressSession = require('express-session');
+const passport = require('passport');
 
 //Inicializaciones
 const app = express();
 require('./database');
+require('./passport')(passport);
 
 //Middleware
     app.use(express.urlencoded({extended: true}));
@@ -20,6 +23,14 @@ require('./database');
         res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
         next();
        });
+    //Se configura la sesión
+    app.use(expressSession({
+        secret:'MySecret',
+        resave: true,
+        saveUninitialized: true 
+        }));
+    app.use(passport.initialize());
+    app.use(passport.session());
        
 //Settings
     //Se configura el puerto
@@ -42,6 +53,7 @@ require('./database');
     //Se configura las rutas para la navegación
     app.use(require('./routes/index.js'))
     app.use(require('./routes/books.js'))
+    app.use(require('./routes/users.js'))
 
 
 //Static files  
