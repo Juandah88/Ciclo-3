@@ -7,8 +7,8 @@ const passport = require('passport');
 
 //Inicializaciones
 const app = express();
-require('./database');
-require('./passport')(passport);
+require('./src/database');
+require('./src/passport')(passport);
 
 //Middleware
     app.use(express.urlencoded({extended: true}));
@@ -51,9 +51,9 @@ require('./passport')(passport);
 
 //Routes
     //Se configura las rutas para la navegación
-    app.use(require('./routes/index.js'))
-    app.use(require('./routes/books.js'))
-    app.use(require('./routes/users.js'))
+    app.use(require('./src/routes/index.js'))
+    app.use(require('./src/routes/books.js'))
+    app.use(require('./src/routes/users.js'))
 
 
 //Static files  
